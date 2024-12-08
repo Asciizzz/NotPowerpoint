@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    /* Placeholder */
+    transition: .5s ease;
+    overflow: hidden;
+}
+
+#powerpoint {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    overflow: hidden;
+}
+
+#intro-screen {
+    z-index: 100;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+
+    cursor: pointer;
+}
+#intro-screen * {
+    font-style: italic;
+    rotate: -10deg;
+}
+#intro-screen div {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    rotate: 0deg;
+    background: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);   
+    background-size: 200% 200%;
+    animation: gradient 10s linear infinite;
+}
+/* Create an animation */
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+#intro-screen h2 {
+    font-size: 3rem;
+    font-weight: 300;
+}
+#intro-screen h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    background: -webkit-linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    transition: .3s ease;
+}
+
+#intro-screen h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+#intro-screen h1:hover {
+    background-position: right;
+    scale: 1.1;
+}
+
+#intro-screen h1:hover ~ h2 {
+    opacity: 0.8;
+    scale: 0.9;
+}
